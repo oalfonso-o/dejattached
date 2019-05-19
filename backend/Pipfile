@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pudb = "*"
+flake8 = "*"
+
+[packages]
+oalfonso-dejavu = {path = ".",editable = true}
+psycopg2-binary = "*"
+
+[requires]
+python_version = "3.6"
+
+[scripts]
+serve = "python manage.py runserver"
+test = "python manage.py test"
+lint = "flake8"
+makemigrations = "python manage.py makemigrations dejavu"
+migrate = "python manage.py migrate"
